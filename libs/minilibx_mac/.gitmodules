@@ -1,0 +1,3 @@
+[submodule "libs/minilibx_mac"]
+	path = libs/minilibx_mac
+	url  = https://github.com/42Paris/minilibx-linux.git
