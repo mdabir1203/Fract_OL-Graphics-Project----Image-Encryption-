@@ -30,8 +30,8 @@
  Struct for real and imaginary numbers **/
 typedef struct s_oper
 {
-	long	r;
-	long	i;
+	double	r;
+	double	i;
 }		t_oper;
 
 /** Struct to draw images **/

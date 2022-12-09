@@ -6,11 +6,12 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 20:35:20 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 00:12:32 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 20:35:54 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+#include<stdio.h>
 
 /**
  * @brief  Finding the no of iterations for mandlebrot
@@ -37,7 +38,7 @@ void	julia(t_mlx *mlx)
 	z = complex_init(mlx->c.r, mlx->c.i);
 	mlx->iter = 0;
 	while (pow(z.r, 2.0) + pow(z.i, 2.0) <= 4
-		&& mlx->iter++ < mlx->iter_max)
+		&& mlx->iter < mlx->iter_max)
 	{
 		z = complex_init(pow(z.r, 2.0) - pow(z.i, 2.0) + mlx->k.r, \
 		2.0 * z.r * z.i + mlx->k.i);
@@ -52,9 +53,10 @@ void	burning_ship(t_mlx *mlx)
 	z = complex_init(mlx->c.r, mlx->c.i);
 	mlx->iter = 0;
 	while (pow(z.r, 2.0) + pow(z.i, 2.0) <= 4 && \
-				mlx->iter++ < mlx->iter_max)
+				mlx->iter < mlx->iter_max)
 	{
 		z = complex_init(pow(z.r, 2.0) - pow(z.i, 2.0) + \
-			(mlx->c.r), -2.0 * labs(z.r * z.i) + mlx->c.i);
+			(mlx->c.r), -2.0 * fabs(z.r * z.i) + mlx->c.i);
+		mlx->iter++;
 	}
 }

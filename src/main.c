@@ -6,11 +6,12 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:36 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 01:05:24 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 20:31:32 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+#include<stdio.h>
 
 /** Function to draw/render fractal on screen **/
 

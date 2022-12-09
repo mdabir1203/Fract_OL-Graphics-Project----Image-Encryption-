@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 02:39:43 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/08 23:42:05 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 20:24:55 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ void	default_init(t_mlx *mlx)
 	mlx->min.r = -2.0;
 	mlx->max.r = 2.0;
 	mlx->min.i = -2.0;
-	mlx->max.i = mlx->min.i + (mlx->max.r - mlx->min.r)
-		* HEIGHT / WIDTH;
+	mlx->max.i = 2.0;
 	mlx->k = complex_init(-0.4, 0.6);
 	mlx->press = 0;
 	mlx->shift = 1;

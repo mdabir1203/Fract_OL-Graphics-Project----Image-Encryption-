@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 14:30:35 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 00:05:38 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 20:29:25 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	trgb_gen(int t, int r, int g, int b)
 
 /** Recoding it as its more faster than the original one
  *  because it uses its separate struct and its easy 
- *  to access  **/
+ *  to acces.. Putting the pixel not by bytes but by line by line.  **/
 
 void	recode_mlx_pixel_put(t_mlx *mlx, int x, int y, int color)
 {
@@ -38,7 +38,7 @@ void	recode_mlx_pixel_put(t_mlx *mlx, int x, int y, int color)
 
 int	color_init(t_mlx *mlx)
 {
-	long	t;
+	double	t;
 	int		color[4];
 
 	t = (double)mlx->iter / (double)mlx->iter_max;
