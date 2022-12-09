@@ -6,14 +6,14 @@
 #    By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 21:06:32 by mabbas            #+#    #+#              #
-#    Updated: 2022/12/08 23:32:21 by mabbas           ###   ########.fr        #
+#    Updated: 2022/12/09 00:22:20 by mabbas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME    = fractol
 #define compiler and flags for Debugger
 CC 		= gcc
-CFLAGS 	= -Wall -Werror -Wextra -fsanitize=address -I ./includes/fractol.h
+CFLAGS 	= -Wall -Werror -Wextra -I ./includes/fractol.h
 
 # Including the directories 
 LIBFT  	= ./libs/libft/

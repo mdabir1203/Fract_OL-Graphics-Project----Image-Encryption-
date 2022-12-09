@@ -24,7 +24,7 @@
 /** Defining the parameters of the window **/
 
 # define WIDTH 800
-# define HEIGHT 600
+# define HEIGHT 800
 
 /** 
  Struct for real and imaginary numbers **/
@@ -55,7 +55,6 @@ typedef struct s_mlx
 	int				iter;
 	int				iter_max;
 	int				press;
-	int				clr;
 	int				shift;
 	t_oper			max;
 	t_oper			min;
@@ -73,7 +72,7 @@ int			color_init(t_mlx *mlx);
 
 int			trgb_gen(int t, int r, int g, int b);
 void		recode_mlx_pixel_put(t_mlx *mlx, int x, int y, int color);
-float		lerp(float start, float end, float inter_coeff);
+double		lerp(double start, double end, double inter_coeff);
 
 int			ctrl_mouse(int key, int x, int y, t_mlx *mlx);
 int			keymap(int key, t_mlx *mlx);
@@ -85,7 +84,7 @@ void		burning_ship(t_mlx *mlx);
 
 void		gui_init(t_mlx *mlx);
 
-void		arg_check(char *argv);
+void		arg_check(char *arg);
 void		help_options(void);
 
 int			change_julia(int x, int y, t_mlx *mlx);

@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:52:20 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/08 23:43:57 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 01:10:49 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	move_w_key(int key, t_mlx *mlx)
 		mlx->min.r = mlx->min.r + delta.r;
 		mlx->max.r = mlx->max.r + delta.r;
 	}
-	else if (key == KEY_S)
+	else if (key == 1)
 	{
 		mlx->min.i = mlx->min.i - delta.i;
 		mlx->max.i = mlx->max.i - delta.i;
@@ -71,7 +71,7 @@ int	keymap(int key, t_mlx *mlx)
 		default_init(mlx);
 	if (key == KEY_ESC)
 		exit (0);
-	if (key == KEY_A || key == KEY_D || key == KEY_S \
+	if (key == KEY_A || key == KEY_D || key == 1 \
 			|| key == KEY_W)
 		move_w_key(key, mlx);
 	if (key == KEY_C)

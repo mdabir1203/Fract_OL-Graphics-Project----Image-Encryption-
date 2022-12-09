@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:36 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 00:06:09 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 01:05:24 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ void	render_fractal(t_mlx *mlx)
 
 	scale = complex_init((mlx->max.r - mlx->min.r) \
 		/ (WIDTH), (mlx->max.i - mlx->min.i) / (HEIGHT));
-	y = -1;
-	while (++y < HEIGHT)
+	y = 0;
+	while (y < HEIGHT)
 	{
 		mlx->c.i = mlx->max.i - y * scale.i;
-		x = -1;
-		while (++x < WIDTH)
+		x = 0;
+		while (x < WIDTH)
 		{
 			mlx->c.r = mlx->min.r + x * scale.r;
 			mlx->eqn(mlx);
-			mlx_pixel_put(mlx->mlx, mlx->win, x, y, color_init(mlx));
-			//x++;
+			recode_mlx_pixel_put(mlx, x, y, color_init(mlx));
+			x++;
 		}
-		//y++;
+		y++;
 	}
 	mlx_put_image_to_window(mlx->mlx, mlx->win, mlx->img->img, 0, 0);
 }
@@ -95,22 +95,22 @@ void	gui_init(t_mlx *mlx)
  *  the fractal
  **/
 
-void	arg_check(char *argv)
+void	arg_check(char *arg)
 {	
 	t_mlx	*mlx;
 
 	mlx = malloc(sizeof(t_mlx));
-	if (!ft_strncmp(argv, "mandelbrot", ft_strlen("mandelbrot")))
+	if (!(ft_strncmp(arg, "1", 1)))
 	{
 		mlx->eqn = &mandelbrot;
 		gui_init(mlx);
 	}	
-	else if (!ft_strncmp(argv, "julia", ft_strlen("julia")))
+	else if (!(ft_strncmp(arg, "2", 1)))
 	{
 		mlx->eqn = &julia;
 		gui_init(mlx);
 	}
-	else if (!ft_strncmp(argv, "burning_ship", ft_strlen("burning_ship")))
+	else if (!(ft_strncmp(arg, "3", 1)))
 	{
 		mlx->eqn = &burning_ship;
 		gui_init(mlx);
@@ -123,8 +123,6 @@ int	main(int argc, char **argv)
 {
 	if (argc == 2)
 		arg_check(argv[1]);
-	else if (argc > 2)
-		ft_putendl_fd("Too many inputs braaahhh", 1);
 	else
 		help_options();
 	return (0);

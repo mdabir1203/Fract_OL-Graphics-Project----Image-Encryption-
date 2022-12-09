@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 19:29:32 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/08 23:07:13 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 01:10:18 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@
 #  define KEY_ENTER 36
 #  define KEY_W 13
 #  define KEY_A 0
-#  define KEY_S 1
+//#  define KEY_S 1
 #  define KEY_D 2
 #  define KEY_Z 6
 #  define KEY_X 7
