@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 20:35:20 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 20:35:54 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/09 23:22:36 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	julia(t_mlx *mlx)
 		2.0 * z.r * z.i + mlx->k.i);
 		mlx->iter++;
 	}
+	mlx_string_put(mlx->mlx, mlx->win, 45, 45, RED_C, "Julia Set");
 }
 
 void	burning_ship(t_mlx *mlx)

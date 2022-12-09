@@ -24,7 +24,7 @@
 /** Defining the parameters of the window **/
 
 # define WIDTH 800
-# define HEIGHT 800
+# define HEIGHT 600
 
 /** 
  Struct for real and imaginary numbers **/

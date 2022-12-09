@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:23:34 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 19:39:16 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/10 00:41:36 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,17 @@ int	ctrl_mouse(int key, int x, int y, t_mlx *mlx)
 	t_oper	mouse;
 	float	zoom;
 
+	zoom = 0.0;
 	if (key == 1)
 		mlx->press = 1;
 	mouse.r = (mlx->min.r + x * ((mlx->max.r - mlx->min.r)
 				/ (WIDTH)));
 	mouse.i = (mlx->max.i - y * ((mlx->max.i - mlx->min.i)
 				/ (HEIGHT)));
-	if (key == KEY_G)
-		zoom = 1.20;
-	else if (key == KEY_H)
-		zoom = 0.80;
-	else
-		zoom = 1.0;
+	if (key == KEY_X)
+		zoom = 1.10 < mlx->max.i;
+	else if (key == KEY_Y)
+		zoom = 0.65 < mlx->min.i;
 	mlx->min.r = lerp(mouse.r, mlx->min.r, zoom);
 	mlx->min.i = lerp(mouse.i, mlx->min.i, zoom);
 	mlx->max.r = lerp(mouse.r, mlx->max.r, zoom);

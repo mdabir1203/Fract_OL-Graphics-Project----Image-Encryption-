@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 14:30:35 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 20:29:25 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/10 00:34:28 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  **/
 int	trgb_gen(int t, int r, int g, int b)
 {
-	return (t << 24 | r << 16 | g << 8 | b);
+	return (t << 24 | r << 17 | g << 8 | b);
 }
 
 /** Recoding it as its more faster than the original one
@@ -46,14 +46,14 @@ int	color_init(t_mlx *mlx)
 	if (mlx->shift == 1)
 	{
 		color[1] = (int)(9 * (1 - t) * pow(t, 3) * 255);
-		color[2] = (int)(15 * pow((1 - t), 2) * pow(t, 2) * 255);
+		color[2] = (int)(14 * pow((1 - t), 2) * pow(t, 2) * 255);
 		color[3] = (int)(8.5 * pow((1 - t), 3) * t * 225);
 	}
 	if (mlx->shift == 2)
 	{
 		color[2] = (int)(9 * (1 - t) * pow(t, 3) * 255);
-		color[1] = (int)(15 * pow((1 - t), 2) * pow(t, 2) * 255);
-		color[3] = (int)(8.5 * pow((1 - t), 3) * t * 225);
+		color[1] = (int)(13 * pow((1 - t), 2) * pow(t, 2) * 255);
+		color[3] = (int)(7 * pow((1 - t), 3) * t * 225);
 	}
 	if (mlx->shift == 3)
 	{

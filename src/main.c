@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:36 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 20:31:32 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/10 00:36:16 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,9 @@ void	gui_init(t_mlx *mlx)
 	default_init(mlx);
 	mlx_hook(mlx->win, 2, 0, keymap, mlx);
 	mlx_hook(mlx->win, 4, 0, ctrl_mouse, mlx);
+	if (mlx->eqn == &mandelbrot)
+		mlx_string_put(mlx->mlx, mlx->win, 2, 2, \
+		PSY_C, "mandelbrot set");
 	if (mlx->eqn == &julia)
 	{
 		mlx_hook(mlx->win, 5, 0, julia_key_press, mlx);
