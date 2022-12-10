@@ -26,10 +26,6 @@
 # define WIDTH 800
 # define HEIGHT 600
 
-#define MLX_SYNC_IMAGE_WRITABLE		1
-#define MLX_SYNC_WIN_FLUSH_CMD		2
-#define MLX_SYNC_WIN_CMD_COMPLETED	3
-
 /** 
  Struct for real and imaginary numbers **/
 typedef struct s_oper
