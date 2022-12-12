@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:36 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/10 22:20:26 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/12 01:50:54 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void	gui_init(t_mlx *mlx)
 	if (mlx->eqn == &julia)
 	{
 		mlx_hook(mlx->win, 5, 0, julia_key_press, mlx);
+		mlx_hook(mlx->win, 2, 0, keymap, mlx);
 		mlx_hook(mlx->win, 6, 0, change_julia, mlx);
 		mlx_hook(mlx->win, 17, 0, close_window, mlx);
 		ft_putendl_fd("Julia is overcooked", 1);

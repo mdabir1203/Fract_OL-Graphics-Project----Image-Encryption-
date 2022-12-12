@@ -6,7 +6,7 @@
 /*   By: mabbas <mabbas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:52:20 by mabbas            #+#    #+#             */
-/*   Updated: 2022/12/09 01:10:49 by mabbas           ###   ########.fr       */
+/*   Updated: 2022/12/12 02:23:01 by mabbas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	keymap(int key, t_mlx *mlx)
 	if (key == KEY_SPACE)
 		default_init(mlx);
 	if (key == KEY_ESC)
-		exit (0);
+		close_window(mlx);
 	if (key == KEY_A || key == KEY_D || key == 1 \
 			|| key == KEY_W)
 		move_w_key(key, mlx);

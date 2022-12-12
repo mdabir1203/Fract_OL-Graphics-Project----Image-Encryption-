@@ -26,6 +26,9 @@
 # define WIDTH 800
 # define HEIGHT 600
 
+# define MIN_V 1
+# define MAX_V 100
+
 /** 
  Struct for real and imaginary numbers **/
 typedef struct s_oper
